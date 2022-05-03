@@ -144,7 +144,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 6200000, guid: ee655b767a6b6c0459dcac29d1e832b8, type: 2}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -173,3 +173,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moving: 0
+  layer:
+    serializedVersion: 2
+    m_Bits: 72
+  Downme: {fileID: 0}
+  distacne: 0
