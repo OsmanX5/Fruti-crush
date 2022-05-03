@@ -127,6 +127,7 @@ public class item : MonoBehaviour
 
     public void makeTheMatch()
     {
+        ScoreManger.score += 10;
         Destroy(this.gameObject);
     }
 

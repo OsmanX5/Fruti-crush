@@ -9,7 +9,7 @@ public class GetDown : MonoBehaviour
     public bool moving = false;
     public LayerMask layer;
     public GameObject Downme;
-    public float distacne;
+    public float distacne = 10f;
     BoxCollider2D myCollider;
 
     private void Awake()
@@ -32,16 +32,19 @@ public class GetDown : MonoBehaviour
         if (hit2D.collider != null)
         {
             Downme = hit2D.collider.gameObject;
-            distacne = hit2D.distance;
         }
-        while (distacne > 0)
+        distacne = transform.position.y -  Downme.transform.position.y;
+        while (distacne >= 1.1 )
         {
-            hit2D = Physics2D.Raycast(transform.position - new Vector3(0, 0.6f), Vector2.down, 1000, layer);
-            distacne = hit2D.distance;
-            transform.position -= transform.up * 0.06f;
+            if (Downme == null) 
+                Downme = Physics2D.Raycast(transform.position - new Vector3(0, 0.6f), Vector2.down, 1000, layer).collider.gameObject;
+            distacne = transform.position.y - Downme.transform.position.y;
+            transform.position -= transform.up * 0.05f;
             if (Input.GetKeyDown(KeyCode.Escape)) break;
             yield return new WaitForSeconds(0.01f);
         }
+
+        transform.position = new Vector3(transform.position.x, Downme.transform.position.y+1f);
         moving = false;
 
     }

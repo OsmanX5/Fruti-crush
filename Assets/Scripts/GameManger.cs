@@ -5,15 +5,24 @@ using UnityEngine;
 public class GameManger : MonoBehaviour
 {
     public static bool waitingPlayerMove = true;
+    private void Start()
+    {
+        InvokeRepeating("CheckAllMatches", 1, 1);
+        InvokeRepeating("MakeAllMatches", 1, 1);
+    }
     private void Update()
     {
         if (Input.GetMouseButtonUp(0))
         {
-           
             CheckAllMatches();
             MakeAllMatches();
-
         }
+        if (Input.GetMouseButtonDown(0))
+        {
+            CheckAllMatches();
+            MakeAllMatches();
+        }
+
     }
     public void MakeAllMatches()
     {

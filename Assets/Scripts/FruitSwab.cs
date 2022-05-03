@@ -63,6 +63,6 @@ public class FruitSwab : MonoBehaviour
         firstObject.GetComponent<BoxCollider2D>().enabled = true;
         SecondObject.GetComponent<BoxCollider2D>().enabled = true;
         GameManger.waitingPlayerMove = false;
-
+        ScoreManger.swabs -= 1;
     }
 }
