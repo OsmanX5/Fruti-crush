@@ -15,6 +15,7 @@ public class item : MonoBehaviour
     SpriteRenderer spriteRenderer;
     public bool isMatched = false;
     public bool touchingTheGround = false;
+    public GameObject CollectingEffect;
     private void Awake()
     {
         aroundColliders = CreateCollidersCheckArround();
@@ -128,6 +129,7 @@ public class item : MonoBehaviour
     public void makeTheMatch()
     {
         ScoreManger.score += 10;
+        Instantiate(CollectingEffect,transform.position, Quaternion.identity);
         Destroy(this.gameObject);
     }
 

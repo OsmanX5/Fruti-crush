@@ -113,6 +113,7 @@ MonoBehaviour:
   - 
   isMatched: 0
   touchingTheGround: 0
+  CollectingEffect: {fileID: 8856906891187102160, guid: 18d50fab8178e2b4689efea7478608be, type: 3}
 --- !u!50 &-1649528573237450649
 Rigidbody2D:
   serializedVersion: 4
