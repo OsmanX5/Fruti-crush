@@ -14,12 +14,14 @@ public class item : MonoBehaviour
     public string[] names = new string[5];
     SpriteRenderer spriteRenderer;
     public bool isMatched = false;
+    public bool touchingTheGround = false;
     private void Awake()
     {
         aroundColliders = CreateCollidersCheckArround();
         spriteRenderer = this.GetComponent<SpriteRenderer>();
 
     }
+    
     private void Update()
     {
         aroundFruits = getArroundFruits();
@@ -27,6 +29,7 @@ public class item : MonoBehaviour
         {
             this.GetComponent<SpriteRenderer>().color = new Color(255, 255, 255, 1);
         }
+
         Fruitsarround[0] = aroundFruits["Up"];
         Fruitsarround[1] = aroundFruits["Down"];
         Fruitsarround[2] = aroundFruits["Right"];

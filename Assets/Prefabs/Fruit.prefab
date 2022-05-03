@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8666706051423810037}
   - component: {fileID: -1649528573237450649}
   - component: {fileID: 7646162635444767781}
+  - component: {fileID: 4767551060828826607}
   m_Layer: 3
   m_Name: Fruit
   m_TagString: Fruit
@@ -98,7 +99,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fruitType: 1
+  aroundColliders: []
+  Fruitsarround:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  names:
+  - 
+  - 
+  - 
+  - 
+  - 
   isMatched: 0
+  touchingTheGround: 0
 --- !u!50 &-1649528573237450649
 Rigidbody2D:
   serializedVersion: 4
@@ -114,7 +128,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0.5
   m_Material: {fileID: 6200000, guid: ee655b767a6b6c0459dcac29d1e832b8, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -146,3 +160,16 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &4767551060828826607
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8666706051423809994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7412a1cbdb6258a4ea7fdc16e63b65f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moving: 0

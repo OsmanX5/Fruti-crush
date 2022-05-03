@@ -12,6 +12,7 @@ public class GameManger : MonoBehaviour
            
             CheckAllMatches();
             MakeAllMatches();
+
         }
     }
     public void MakeAllMatches()

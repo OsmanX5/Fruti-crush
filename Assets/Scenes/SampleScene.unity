@@ -466,7 +466,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55b24acf662dbde4e9c15e832a48de7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  matches: 0
 --- !u!114 &871552772
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -658,7 +657,7 @@ GameObject:
   - component: {fileID: 1458797757}
   m_Layer: 0
   m_Name: wall-down
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
