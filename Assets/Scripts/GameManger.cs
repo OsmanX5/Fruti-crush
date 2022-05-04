@@ -5,6 +5,8 @@ using UnityEngine;
 public class GameManger : MonoBehaviour
 {
     public static bool waitingPlayerMove = true;
+    public AudioClip collectingSound;
+    public AudioSource AudSource;
     private void Start()
     {
         InvokeRepeating("CheckAllMatches", 1, 1);
@@ -32,6 +34,10 @@ public class GameManger : MonoBehaviour
             if (fruit.isMatched == true)
             {
                 fruit.makeTheMatch();
+                if (AudSource.isPlaying == false)
+                {
+                    AudSource.PlayOneShot(collectingSound);
+                }
             }
         }
     }

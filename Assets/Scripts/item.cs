@@ -17,6 +17,7 @@ public class item : MonoBehaviour
     public bool touchingTheGround = false;
     public GameObject CollectingEffect;
     public GameObject MovingFruit;
+
     private void Awake()
     {
         aroundColliders = CreateCollidersCheckArround();
@@ -133,6 +134,7 @@ public class item : MonoBehaviour
         Instantiate(CollectingEffect,transform.position, Quaternion.identity);
         GameObject movingFruit =  Instantiate(MovingFruit, transform.position, Quaternion.identity);
         movingFruit.GetComponent<SpriteRenderer>().sprite = this.GetComponent<SpriteRenderer>().sprite;
+        
         Destroy(this.gameObject);
     }
 
