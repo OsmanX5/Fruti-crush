@@ -12,7 +12,6 @@ public class item : MonoBehaviour
 
     [Header("Fruit proberaties")]
     public bool isMatched = false;
-    public bool touchingTheGround = false;
     public bool isMoving;
 
     [Header("Effects")]

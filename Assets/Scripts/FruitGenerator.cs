@@ -33,10 +33,7 @@ public class FruitGenerator : MonoBehaviour
                 fruit.GetComponent<item>().FruitType = (item.fruitTypes)Random.Range(1, System.Enum.GetNames(typeof(item.fruitTypes)).Length-1);
                 fruit.name = fruit.GetComponent<item>().FruitType.ToString();
 
-                // 4. for the first line set touchingGround = true;
-                if (i == 0)  fruit.GetComponent<item>().touchingTheGround = true;  
-
-                // 5. time puse effect
+                // 4. time puse effect
                 yield return new WaitForSeconds(0.005f);
             }
             yield return new WaitForSeconds(0.005f);

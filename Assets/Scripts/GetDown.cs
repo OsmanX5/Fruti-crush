@@ -29,12 +29,15 @@ public class GetDown : MonoBehaviour
         if (hit2D.collider != null)
         {
             Downme = hit2D.collider.gameObject;
+            //3.calculating the distacne from the player
             distacne = transform.position.y-Downme.transform.position.y;
         }
+        // 4. if distance >1 move the fruit down ### note : the default distance between two object centers = 1
         if (distacne > 1)
         {
             transform.Translate(Vector2.down * Time.deltaTime * 4);
         }
+        // 5. if the distance smaller than 1 so the fruit reached the body so put the fruit with 1 unity above
         if (distacne <= 1)
         {
             transform.position = new Vector2(transform.position.x, Downme.transform.position.y + 1);

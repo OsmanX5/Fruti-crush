@@ -30,7 +30,7 @@ public class ScoreTarget : MonoBehaviour
             startCounting = false;
             StartCoroutine(floatingTextUp());
             floatingText.text = "X"+countInsideTime.ToString();
-            ScoreManger.score += countInsideTime * 10;
+            ScoreManger.score += countInsideTime +( countInsideTime /3 -1)* countInsideTime;
             countInsideTime = 0;
         }
     }
