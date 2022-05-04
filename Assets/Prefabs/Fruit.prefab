@@ -29,7 +29,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8666706051423809994}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.372, y: -1.8691219, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -98,23 +98,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1aa54c8e40baf5c45bef0fa3a83d7a10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fruitType: 1
-  aroundColliders: []
-  Fruitsarround:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  names:
-  - 
-  - 
-  - 
-  - 
-  - 
   isMatched: 0
   touchingTheGround: 0
+  isMoving: 0
   CollectingEffect: {fileID: 8856906891187102160, guid: 18d50fab8178e2b4689efea7478608be, type: 3}
   MovingFruit: {fileID: 6695532310267606219, guid: 467bc225ebfae57429226231dabc7589, type: 3}
+  aroundFruitsObjects:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!50 &-1649528573237450649
 Rigidbody2D:
   serializedVersion: 4

@@ -4,48 +4,42 @@ using UnityEngine;
 
 public class GetDown : MonoBehaviour
 {
-
-    item item;
-    public bool moving = false;
+    // Script making the fruit moveing down if there is nothing untill ground
+    // Mechanism : using raycast to detect what is the down game object and moveing untill reaching it
+    // 
     public LayerMask layer;
-    public GameObject Downme;
-    public float distacne = 10f;
+    GameObject Downme;
+    float distacne = 10f;
+    RaycastHit2D hit2D;
+    item item;
     BoxCollider2D myCollider;
 
     private void Awake()
     {
         item = this.GetComponent<item>();
         myCollider = this.GetComponent<BoxCollider2D>();
-
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
-        if (!moving && item.aroundFruits["Down"] == null && !item.touchingTheGround) StartCoroutine(movingDown());
-    }
-    IEnumerator movingDown()
-    {
-        moving = true;
-        RaycastHit2D hit2D;
-        hit2D = Physics2D.Raycast(transform.position - new Vector3(0, 0.6f), Vector2.down, 1000, layer);
+        // 1.Casting ray from under this collider to down working in fruit and ground layer
+        hit2D = Physics2D.Raycast(transform.position + new Vector3(0, -0.51f), Vector2.down, 100f, layer);
+        
+        //2. check if there is object in under if it's found set Downme object
         if (hit2D.collider != null)
         {
             Downme = hit2D.collider.gameObject;
+            distacne = transform.position.y-Downme.transform.position.y;
         }
-        distacne = transform.position.y -  Downme.transform.position.y;
-        while (distacne >= 1.1 )
+        if (distacne > 1)
         {
-            if (Downme == null) 
-                Downme = Physics2D.Raycast(transform.position - new Vector3(0, 0.6f), Vector2.down, 1000, layer).collider.gameObject;
-            distacne = transform.position.y - Downme.transform.position.y;
-            transform.position -= transform.up * 0.1f;
-            if (Input.GetKeyDown(KeyCode.Escape)) break;
-            yield return new WaitForSeconds(0.01f);
+            transform.Translate(Vector2.down * Time.deltaTime * 4);
         }
-
-        transform.position = new Vector3(transform.position.x, Downme.transform.position.y+1f);
-        moving = false;
-
+        if (distacne <= 1)
+        {
+            transform.position = new Vector2(transform.position.x, Downme.transform.position.y + 1);
+        }
     }
+
 
 }

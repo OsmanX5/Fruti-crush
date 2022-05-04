@@ -15,10 +15,6 @@ public class CollidingData : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Ground")
-        {
-            transform.parent.GetComponent<item>().touchingTheGround = true;
-        }
         if (collision.GetComponent<item>() != null)
         {
             collidedObject = collision.gameObject;
@@ -26,10 +22,6 @@ public class CollidingData : MonoBehaviour
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Ground")
-        {
-            transform.parent.GetComponent<item>().touchingTheGround = true;
-        }
         if (collision.GetComponent<item>() != null)
         {
             collidedObject = collision.gameObject;
