@@ -21,6 +21,7 @@ public class ScoreManger : MonoBehaviour
     }
     void gameOver()
     {
+        this.GetComponent<PlayFabControl>().sendScoreToBord(score);
         SceneManager.LoadScene("GameOver");
     }
 

@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: PlayFabEditorPrefsSO
   m_EditorClassIdentifier: 
   DevAccountEmail: gamemakerx5@gmail.com
-  DevAccountToken: pk9bc66onhm3dcizgjus4bp7t5nh541payoy9ufxhy3mbawofhwgtphemc78z15dkg3awt9yfs8gak68nau7f4howcpcaxtajiyp9oforb5ob6omxz53q3o3y44n93cdb58xrbwpjjq7pxfrn3ofckptyyisntmttzqqd8zuqjjdet6a34kd1dsu1m7c5kdjq9q3kd7x
-  SelectedStudio: 
+  DevAccountToken: hu9qnkm3rhufa7iq535kyecynkioqb9hcy1asmuh17861wt4ndawyk4dyhtzu3ak6jpa48g5rsqo3r416chi6pdf6omu4uncacceu344tuakdbox8me3qjmrtwtgx5canzc54tddyxsr877p6wa6fzip1f5refh8u4ixmdif7rrwqxdxzbbm3otd93caazjp9pg4h61t
+  SelectedStudio: Blaze studio
   SdkPath: Assets/PlayFabSDK
   EdExPath: 
   LocalCloudScriptPath: 
   PanelIsShown: 0
-  curMainMenuIdx: 0
+  curMainMenuIdx: 1
   curSubMenuIdx: 0
