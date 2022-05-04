@@ -21,12 +21,11 @@ public class GetDown : MonoBehaviour
 
     private void Update()
     {
-        if (!moving && item.Fruitsarround[1] == null && !item.touchingTheGround) StartCoroutine(movingDown());
+        if (!moving && item.aroundFruits["Down"] == null && !item.touchingTheGround) StartCoroutine(movingDown());
     }
     IEnumerator movingDown()
     {
         moving = true;
-        yield return new WaitForSeconds(0.2f);
         RaycastHit2D hit2D;
         hit2D = Physics2D.Raycast(transform.position - new Vector3(0, 0.6f), Vector2.down, 1000, layer);
         if (hit2D.collider != null)
@@ -39,7 +38,7 @@ public class GetDown : MonoBehaviour
             if (Downme == null) 
                 Downme = Physics2D.Raycast(transform.position - new Vector3(0, 0.6f), Vector2.down, 1000, layer).collider.gameObject;
             distacne = transform.position.y - Downme.transform.position.y;
-            transform.position -= transform.up * 0.05f;
+            transform.position -= transform.up * 0.1f;
             if (Input.GetKeyDown(KeyCode.Escape)) break;
             yield return new WaitForSeconds(0.01f);
         }

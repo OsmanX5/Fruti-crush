@@ -9,24 +9,24 @@ public class GameManger : MonoBehaviour
     public AudioSource AudSource;
     private void Start()
     {
-        InvokeRepeating("CheckAllMatches", 1, 1);
-        InvokeRepeating("MakeAllMatches", 1, 1);
+      //  InvokeRepeating("CheckAllMatches", 1, 1);
+       // InvokeRepeating("MakeAllMatches", 1, 1);
     }
     private void Update()
     {
         if (Input.GetMouseButtonUp(0))
         {
-            CheckAllMatches();
-            MakeAllMatches();
+        //    CheckAllMatches();
+         //   MakeAllMatches();
         }
         if (Input.GetMouseButtonDown(0))
         {
-            CheckAllMatches();
-            MakeAllMatches();
+        //    CheckAllMatches();
+        //    MakeAllMatches();
         }
 
     }
-    public void MakeAllMatches()
+   /* public void MakeAllMatches()
     {
         item[] allFruits = this.transform.GetComponentsInChildren<item>();
         foreach (var fruit in allFruits)
@@ -34,19 +34,23 @@ public class GameManger : MonoBehaviour
             if (fruit.isMatched == true)
             {
                 fruit.makeTheMatch();
-                if (AudSource.isPlaying == false)
-                {
-                    AudSource.PlayOneShot(collectingSound);
-                }
+                
             }
         }
-    }
-    public void CheckAllMatches()
+    }*/
+    /*public void CheckAllMatches()
     {
         item[] allFruits = this.transform.GetComponentsInChildren<item>();
         foreach (var fruit in allFruits)
         {
             fruit.checkForMatches();
+        }
+    }*/
+    public void playCollectingSound()
+    {
+        if (AudSource.isPlaying == false)
+        {
+            AudSource.PlayOneShot(collectingSound);
         }
     }
 }

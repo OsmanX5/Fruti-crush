@@ -40,9 +40,27 @@ public class PlayFabControl : MonoBehaviour
         PlayFabClientAPI.UpdatePlayerStatistics(request, LeaderBordUpdatedSuccefully, RequestFail);
     }
 
+    public void GetLeadebord()
+    {
+        var request = new GetLeaderboardRequest
+        {
+            StatisticName = "HighestScore",
+            MaxResultsCount = 10,
+            StartPosition = 0
+        };
+        PlayFabClientAPI.GetLeaderboard(request, LeaderBordGetedSuccefully, RequestFail);
+    }
     void LeaderBordUpdatedSuccefully(UpdatePlayerStatisticsResult _)
     {
         Debug.Log("LEADER BORD UPDATED");
     }
-    
+    void LeaderBordGetedSuccefully(GetLeaderboardResult result)
+    {
+        foreach (var item in result.Leaderboard)
+        {
+            Debug.Log(item.Position+ " | " +item.PlayFabId +" | "+ item.StatValue);
+        }
+        Debug.Log("LEADER BORD geted successfully");
+    }
+
 }

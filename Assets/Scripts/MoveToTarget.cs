@@ -16,7 +16,8 @@ public class MoveToTarget : MonoBehaviour
     }
     public IEnumerator Move()
     {
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.05f);
+        
         dir = target.position - transform.position;
         while (Vector2.Distance(transform.position,target.position) > 0.1f)
         {
