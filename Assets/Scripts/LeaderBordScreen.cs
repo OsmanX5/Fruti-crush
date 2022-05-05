@@ -7,6 +7,7 @@ public class LeaderBordScreen : MonoBehaviour
     public static Dictionary<int, List<string>> leaderBord =null;
     public List<TMP_Text> leaders_names;
     public List<TMP_Text> leaders_score;
+
     private void Start()
     {
         this.GetComponent<PlayFabControl>().Login();

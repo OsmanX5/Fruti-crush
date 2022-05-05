@@ -366,7 +366,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -19}
+  m_AnchoredPosition: {x: 0, y: 0.75}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &237131600
@@ -610,7 +610,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 1, y: -34}
-  m_SizeDelta: {x: 607.5, y: 202.5}
+  m_SizeDelta: {x: 425.25, y: 141.75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &471366153
 MonoBehaviour:
@@ -769,7 +769,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 1, y: 131}
-  m_SizeDelta: {x: 607.5, y: 202.5}
+  m_SizeDelta: {x: 425.25, y: 141.75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &511710960
 MonoBehaviour:
@@ -1113,7 +1113,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -19}
+  m_AnchoredPosition: {x: 0, y: 0.75}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &867033466
@@ -1368,6 +1368,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8e01f929039c404e88b32d9c3df32df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  LeaderBordObject: {fileID: 0}
+  EnterYourName: {fileID: 0}
+  Playername: {fileID: 0}
 --- !u!1 &1344404070
 GameObject:
   m_ObjectHideFlags: 0
@@ -1664,7 +1667,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -19}
+  m_AnchoredPosition: {x: 0, y: 0.75}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1808413727
@@ -1866,7 +1869,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 1, y: -214.5}
-  m_SizeDelta: {x: 607.5, y: 202.5}
+  m_SizeDelta: {x: 425.25, y: 141.75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2023270388
 MonoBehaviour:

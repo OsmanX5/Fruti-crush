@@ -18,6 +18,8 @@ public class GameManger : MonoBehaviour
 
     public void RestartTheGame()
     {
+        ScoreManger.score = 0;
+        
         SceneManager.LoadScene("Game");
     }
     public void gameOver()
