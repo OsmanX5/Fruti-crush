@@ -83,7 +83,6 @@ public class PlayFabControl : MonoBehaviour
         {
             Debug.Log("Welcome " + MydisplyName(result.InfoResultPayload.PlayerProfile));
             EnterYourName.SetActive(false);
-            LeaderBordObject.SetActive(true);
             sendScoreToBord(ScoreManger.score);
         }
     }
@@ -94,6 +93,7 @@ public class PlayFabControl : MonoBehaviour
     }
     void GetLeaderBordSuccessed(GetLeaderboardResult result)
     {
+        LeaderBordObject.SetActive(true);
         Dictionary<int, List<string>> leaderBord = new Dictionary<int, List<string>>();
         foreach (var item in result.Leaderboard)
         {
